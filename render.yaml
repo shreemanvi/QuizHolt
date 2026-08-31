@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: quizzy-backend
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    dockerCommand: java -jar target/quiz-app-backend-1.0.0.jar
