@@ -10,4 +10,4 @@ RUN mvn -f backend/pom.xml clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "backend/target/quiz-app-backend-1.0.0.jar"]
+CMD ["java", "-jar", "backend/target/demo-0.0.1-SNAPSHOT.jar"]
