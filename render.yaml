@@ -1,9 +1,17 @@
 services:
   - type: web
-    name: quizzy-backend
+    name: quizholt-backend
     runtime: docker
     plan: free
     region: singapore
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
     dockerCommand: java -jar target/quiz-app-backend-1.0.0.jar
+
+  - type: web
+    name: quizholt-frontend
+    runtime: static
+    plan: free
+    region: singapore
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/build
