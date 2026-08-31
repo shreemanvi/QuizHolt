@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import './App.css';
 
-const API_BASE = 'http://localhost:8080/api/quizzes';
+const API_BASE = 'https://quizholt-backend.onrender.com/api/quizzes';
 
 const staggerContainer = {
   hidden: { opacity: 0 },
