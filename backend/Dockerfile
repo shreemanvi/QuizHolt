@@ -4,9 +4,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+RUN apt-get update && apt-get install -y maven
+
+RUN mvn -f backend/pom.xml clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/quiz-app-backend-1.0.0.jar"]
+CMD ["java", "-jar", "backend/target/quiz-app-backend-1.0.0.jar"]
